@@ -43,6 +43,7 @@ elk_wallet_private_key = "YOUR_ELK_WALLET_PRIVATE_KEY"
 
 ## Diagram
 
+```
  fs-trex0.yourdomain.com       fs-elk0.yourdomain.com
              |                            |
              |                            |
@@ -53,6 +54,7 @@ elk_wallet_private_key = "YOUR_ELK_WALLET_PRIVATE_KEY"
      | | trex bot  | |            | | elk bot   | |
      | +-----------+ |            | +-----------+ |
      +---------------+            +---------------+
+```
 
 Run:
 ```bash
