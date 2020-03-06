@@ -1,6 +1,8 @@
+# FutureSwap Bots Terraform
+
 ## Prerequisites
 
-**Terraform***
+**Terraform**
 - Install Terraform for your platform ([instructions](https://learn.hashicorp.com/terraform/getting-started/install.html))
 
 **DigitalOcean**
@@ -39,9 +41,22 @@ trex_wallet_private_key = "YOUR_TREX_WALLET_PRIVATE_KEY"
 elk_wallet_private_key = "YOUR_ELK_WALLET_PRIVATE_KEY"
 ```
 
+## Diagram
+
+ fs-trex0.yourdomain.com       fs-elk0.yourdomain.com
+             |                            |
+             |                            |
+             v                            v
+     +---------------+            +---------------+
+     | fs-trex0 VPS  |            | fs-elk0 VPS   |
+     | +-----------+ |            | +-----------+ |
+     | | trex bot  | |            | | elk bot   | |
+     | +-----------+ |            | +-----------+ |
+     +---------------+            +---------------+
+
 Run:
 ```bash
-tf apply -auto-approve
+terraform apply -auto-approve
 ```
 
 ## Tyrannosaurus Rekt (Liquidation Bot)
@@ -58,4 +73,11 @@ After Terraform is done spinning everything up, SSH into your VPS and run this t
 ```bash
 cd internal_exchange_bot/
 tail -f log.txt
+```
+
+## Destroy
+
+When done testing, just run:
+```bash
+terraform destroy
 ```
