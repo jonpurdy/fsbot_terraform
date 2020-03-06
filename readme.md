@@ -1,4 +1,4 @@
-# FutureSwap Bots Terraform
+# Futureswap bots Terraform
 
 ## Prerequisites
 
