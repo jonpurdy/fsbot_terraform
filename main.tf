@@ -5,7 +5,7 @@ resource "digitalocean_droplet" "fs-trex" {
     image = "ubuntu-18-04-x64"
     name = "fs-trex${count.index}"
     region = var.region
-    size = "s-1vcpu-1gb"
+    size = var.size
     ssh_keys = [
       "${var.ssh_fingerprint}"
     ]

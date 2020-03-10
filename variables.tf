@@ -8,14 +8,14 @@ variable "region" {
     default = "sfo2"
 }
 
+variable "size" {
+    type    = string
+    default = "s-1vcpu-1gb"
+}
+
 variable "node_count" {
     type    = number
     default = 1
-}
-
-variable "chainlink_directory" {
-    type    = string
-    default = "/root/.chainlink-ropsten"
 }
 
 variable "trex_wallet_private_key" {}
