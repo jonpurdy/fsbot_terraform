@@ -92,7 +92,7 @@ terraform apply -auto-approve
 After Terraform is done spinning everything up, SSH into your VPS and run this to view the logs:
 ```bash
 cd liquidation_bot/
-docker-compose logs --follow --tail 100 api
+docker-compose logs --follow --tail 20 api
 ```
 
 ## ELK (Internal Exchange Bot)
